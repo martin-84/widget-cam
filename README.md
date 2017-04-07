@@ -1,4 +1,4 @@
-# # com-chilipeppr-widget-cam
+# # com-chilipeppr-nde-red-dashbrd
 A widget that lets you view a nde-RED dashbrd in Chil.Peppr
 
 ![alt text](screenshot.png "Screenshot")
@@ -11,7 +11,7 @@ not conflict with other ChiliPeppr widgets.
 
 | Item                  | Value           |
 | -------------         | ------------- | 
-| ID                    | # com-chilipeppr-widget-cam |
+| ID                    | # com-chilipeppr-nde-red-dashbrd |
 | Name                  | Widget / NR Dashboard |
 | Description           | A widget that lets you view a nde-RED dashbrd in Chil.Peppr |
 | chilipeppr.load() URL | http://raw.githubusercontent.com/martin-84/widget-nde-red-dashbrd/master/auto-generated-widget.html |
@@ -29,20 +29,20 @@ back the instance of it.
 
 ```javascript
 // Inject new div to contain widget or use an existing div with an ID
-$("body").append('<' + 'div id="myDiv# WidgetCam"><' + '/div>');
+$("body").append('<' + 'div id="myDiv# NdeRedDashbrd"><' + '/div>');
 
 chilipeppr.load(
-  "#myDiv# WidgetCam",
+  "#myDiv# NdeRedDashbrd",
   "http://raw.githubusercontent.com/martin-84/widget-nde-red-dashbrd/master/auto-generated-widget.html",
   function() {
-    // Callback after widget loaded into #myDiv# WidgetCam
+    // Callback after widget loaded into #myDiv# NdeRedDashbrd
     // Now use require.js to get reference to instantiated widget
     cprequire(
-      ["inline:# com-chilipeppr-widget-cam"], // the id you gave your widget
-      function(myObj# WidgetCam) {
+      ["inline:# com-chilipeppr-nde-red-dashbrd"], // the id you gave your widget
+      function(myObj# NdeRedDashbrd) {
         // Callback that is passed reference to the newly loaded widget
-        console.log("Widget / NR Dashboard just got loaded.", myObj# WidgetCam);
-        myObj# WidgetCam.init();
+        console.log("Widget / NR Dashboard just got loaded.", myObj# NdeRedDashbrd);
+        myObj# NdeRedDashbrd.init();
       }
     );
   }
@@ -132,7 +132,7 @@ The table below shows, in order, the methods and properties inside the widget/el
           </tr>
       </thead>
       <tbody>
-      <tr valign="top"><td>id</td><td>string</td><td>"# com-chilipeppr-widget-cam"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Widget / NR Dashboard"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"A widget that lets you view a nde-RED dashbrd in Chil.Peppr"</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/martin-84/widget-nde-red-dashbrd/master/auto-generated-widget.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/martin84eh/nde-red-dashboard-widget"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"http://github.com/martin-84/widget-nde-red-dashbrd"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://nde-red-dashboard-widget-martin84eh.c9users.io/widget.html"</td></tr><tr valign="top"><td>publish</td><td>object</td><td>Please see docs above.<br><br>Define the publish signals that this widget/element owns or defines so that
+      <tr valign="top"><td>id</td><td>string</td><td>"# com-chilipeppr-nde-red-dashbrd"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Widget / NR Dashboard"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"A widget that lets you view a nde-RED dashbrd in Chil.Peppr"</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/martin-84/widget-nde-red-dashbrd/master/auto-generated-widget.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/martin84eh/nde-red-dashboard-widget"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"http://github.com/martin-84/widget-nde-red-dashbrd"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://nde-red-dashboard-widget-martin84eh.c9users.io/widget.html"</td></tr><tr valign="top"><td>publish</td><td>object</td><td>Please see docs above.<br><br>Define the publish signals that this widget/element owns or defines so that
 other widgets know how to subscribe to them and what they do.</td></tr><tr valign="top"><td>subscribe</td><td>object</td><td>Please see docs above.<br><br>Define the subscribe signals that this widget/element owns or defines so that
 other widgets know how to subscribe to them and what they do.</td></tr><tr valign="top"><td>foreignPublish</td><td>object</td><td>Please see docs above.<br><br>Document the foreign publish signals, i.e. signals owned by other widgets
 or elements, that this widget/element publishes to.</td></tr><tr valign="top"><td>foreignSubscribe</td><td>object</td><td>Please see docs above.<br><br>Document the foreign subscribe signals, i.e. signals owned by other widgets
