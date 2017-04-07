@@ -88,14 +88,14 @@ cprequire_test(["inline:com-chilipeppr-widget-cam"], function(myWidget) {
 } /*end_test*/ );
 
 // This is the main definition of your widget. Give it a unique name.
-cpdefine("inline:com-chilipeppr-widget-cam", ["chilipeppr_ready", /* other dependencies here */ ], function() {
+cpdefine("inline:# com-chilipeppr-widget-cam", ["chilipeppr_ready", /* other dependencies here */ ], function() {
     return {
         /**
          * The ID of the widget. You must define this and make it unique.
          */
-        id: "com-chilipeppr-widget-cam", // Make the id the same as the cpdefine id
-        name: "Widget / Cam", // The descriptive name of your widget.
-        desc: "This widget loads a webcam view in ChiliPeppr via WebRTC.", // A description of what your widget does
+        id: "# com-chilipeppr-widget-cam", // Make the id the same as the cpdefine id
+        name: "Widget / NR Dashboard", // The descriptive name of your widget.
+        desc: "A widget that lets you view a nde-RED dashbrd in Chil.Peppr", // A description of what your widget does
         url: "(auto fill by runme.js)",       // The final URL of the working widget as a single HTML file with CSS and Javascript inlined. You can let runme.js auto fill this if you are using Cloud9.
         fiddleurl: "(auto fill by runme.js)", // The edit URL. This can be auto-filled by runme.js in Cloud9 if you'd like, or just define it on your own to help people know where they can edit/fork your widget
         githuburl: "(auto fill by runme.js)", // The backing github repo
@@ -517,7 +517,7 @@ cpdefine("inline:com-chilipeppr-widget-cam", ["chilipeppr_ready", /* other depen
         onBtnStartClick: function(evt) {
             // hide popover
             $('#' + this.id + " .btn-startstreaming").popover('hide');
-            $('#' + this.id).find('.mjpeg-image').attr("src", this.options.mjpegurl);
+            $('#' + this.id).find('.mjpeg-image').attr("src", this.options.ndredurl);
             //this.start();
         },
         onBtnStopClick: function(evt) {
@@ -882,10 +882,10 @@ cpdefine("inline:com-chilipeppr-widget-cam", ["chilipeppr_ready", /* other depen
             var el = $('#' + that.id);
             
             // Save parameter in localspace if user change
-            el.find('.mjpeg-url').change(function(evt) {
+            el.find('.nde-red-db-url').change(function(evt) {
                 console.log("evt:", evt);
-                that.options.mjpegurl = evt.currentTarget.value;
-                el.find('.mjpeg-image').attr("src", that.options.mjpegurl);
+                that.options.ndredurl = evt.currentTarget.value;
+                el.find('.mjpeg-image').attr("src", that.options.ndredurl);
                 console.log("options:", that.options);
                 that.saveOptionsLocalStorage();
             });
@@ -904,20 +904,20 @@ cpdefine("inline:com-chilipeppr-widget-cam", ["chilipeppr_ready", /* other depen
             });
 
             // use all parameters from localspace
-            if(that.options.mjpegurl !== undefined){
-                el.find('.mjpeg-image').attr("src", that.options.mjpegurl);
-                el.find('.mjpeg-url').val(that.options.mjpegurl);
+            if(that.options.ndredurl !== undefined){
+                el.find('.mjpeg-image').attr("src", that.options.ndredurl);
+                el.find('.nde-red-db-url').val(that.options.ndredurl);
             }
-            if(that.options.camxoffset !== undefined){
-                el.find('.CAMXoffset').val(that.options.camxoffset);
-            }
-            if(that.options.camyoffset !== undefined){
-                el.find('.CAMYoffset').val(that.options.camyoffset);
-            }
-            if(that.options.ZOOMdistance !== undefined){
-                el.find('.ZOOMdistance').val(that.options.ZOOMdistance);
-                // TODO: replace css hover with jquery hover and use ZOOMdistance
-            }
+            // if(that.options.camxoffset !== undefined){
+            //     el.find('.CAMXoffset').val(that.options.camxoffset);
+            // }
+            // if(that.options.camyoffset !== undefined){
+            //     el.find('.CAMYoffset').val(that.options.camyoffset);
+            // }
+            // if(that.options.ZOOMdistance !== undefined){
+            //     el.find('.ZOOMdistance').val(that.options.ZOOMdistance);
+            //     // TODO: replace css hover with jquery hover and use ZOOMdistance
+            // }
             // Trigger a change at all input fields
             el.find('input').trigger('change');
 
@@ -1045,7 +1045,7 @@ console.log(direction);
             $('#' + this.id + ' .hidebody span').addClass('glyphicon-chevron-up');
             $('#' + this.id + ' .hidebody span').removeClass('glyphicon-chevron-down');
             $('#' + this.id + ' .overlayWrapper').removeClass('hidden');
-            $('#' + this.id).find('.mjpeg-image').attr("src", this.options.mjpegurl);
+            $('#' + this.id).find('.mjpeg-image').attr("src", this.options.ndredurl);
             if (!(evt == null)) {
                 this.options.showBody = true;
                 this.saveOptionsLocalStorage();
