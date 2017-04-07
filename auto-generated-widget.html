@@ -974,19 +974,19 @@ cpdefine("inline:com-chilipeppr-nde-red-dashbrd", ["chilipeppr_ready", /* other 
                 console.log("options:", that.options);
                 that.saveOptionsLocalStorage();
             });
-            el.find('.CAMXoffset').change(function(evt) {
-                that.options.camxoffset = evt.currentTarget.value;
-                that.saveOptionsLocalStorage();
-            });
-            el.find('.CAMYoffset').change(function(evt) {
-                that.options.camyoffset = evt.currentTarget.value;
-                that.saveOptionsLocalStorage();
-            });
-            el.find('.ZOOMdistance').change(function(evt) {
-                that.options.ZOOMdistance = evt.currentTarget.value;
-                // TODO: replace css hover with jquery hover and use ZOOMdistance
-                that.saveOptionsLocalStorage();
-            });
+            // el.find('.CAMXoffset').change(function(evt) {
+            //     that.options.camxoffset = evt.currentTarget.value;
+            //     that.saveOptionsLocalStorage();
+            // });
+            // el.find('.CAMYoffset').change(function(evt) {
+            //     that.options.camyoffset = evt.currentTarget.value;
+            //     that.saveOptionsLocalStorage();
+            // });
+            // el.find('.ZOOMdistance').change(function(evt) {
+            //     that.options.ZOOMdistance = evt.currentTarget.value;
+            //     // TODO: replace css hover with jquery hover and use ZOOMdistance
+            //     that.saveOptionsLocalStorage();
+            // });
 
             // use all parameters from localspace
             if(that.options.ndredurl !== undefined){
