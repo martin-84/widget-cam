@@ -1,7 +1,5 @@
 # com-chilipeppr-nde-red-dashbrd
-A widget that lets you view a nde-RED dashbrd in Chil.Peppr
-
-![alt text](screenshot.png "Screenshot")
+A widget that lets you view a nde-RED dashbrd in ChilliPeppr (or embed any other website into widget, as it provides a very simple iframe)
 
 ## ChiliPeppr Widget / NR Dashboard
 
